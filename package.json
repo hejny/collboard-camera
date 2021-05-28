@@ -11,12 +11,13 @@
         "url": "https://github.com/collboard/module-sample-basic"
     },
     "private": false,
-    "main": "./src/_index.ts",
+    "main": "./src/CameraTool.tsx",
     "scripts": {
         "start": "colldev ",
         "publish": "colldev publish"
     },
     "dependencies": {
-        "@collboard/modules-sdk": "^11.3.0-5"
+        "@collboard/modules-sdk": "^11.3.0-5",
+        "waitasecond": "^1.6.0"
     }
 }
