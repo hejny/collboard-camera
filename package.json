@@ -1,0 +1,22 @@
+{
+    "version": "10.4.1-2",
+    "description": "Simple sample module for Collboard.com created via @collboard/modules-sdk",
+    "license": "SEE LICENSE IN LICENSE",
+    "contributors": [
+        "Pavol Hejný <pavol@collboard.com> (https://pavolhejny.com)",
+        "Jonáš Rosecký <jonas@collboard.com>"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/collboard/module-sample-basic"
+    },
+    "private": false,
+    "main": "./src/_index.ts",
+    "scripts": {
+        "start": "colldev ",
+        "publish": "colldev publish"
+    },
+    "dependencies": {
+        "@collboard/modules-sdk": "^11.3.0-5"
+    }
+}
