@@ -1,11 +1,4 @@
-import {
-    declareModule,
-    FocusScopeName,
-    Icon,
-    ImageArt,
-    makeIconModuleOnModule,
-    ToolbarName,
-} from '@collboard/modules-sdk';
+import { declareModule, Icon, ImageArt, makeIconModuleOnModule, ToolbarName } from '@collboard/modules-sdk';
 import * as React from 'react';
 import { Vector } from 'xyzt';
 import packageJson from '../package.json';
@@ -30,7 +23,7 @@ declareModule(() => {
             return {
                 autoSelect: true,
                 section: 2,
-                focusScope: FocusScopeName.Social /* TODO: !!! null + option to name it by string */,
+                focusScope: null,
                 char: '📷',
                 boardCursor: 'crosshair',
                 menu: (
