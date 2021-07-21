@@ -13,17 +13,20 @@ export class CameraArt extends Abstract2dBoxArt {
 
     public renderBox() {
         return (
-            <video
-                style={{ opacity: 0.8 }}
-                autoPlay={true}
-                id="videoElement"
-                ref={(videoElement) => {
-                    if (videoElement) {
-                        this.videoElement = videoElement;
-                        videoElement.srcObject = this.stream;
-                    }
-                }}
-            />
+            <div>
+                {Math.random()}
+                <video
+                    style={{ opacity: 0.8 }}
+                    autoPlay={true}
+                    id="videoElement"
+                    ref={(videoElement) => {
+                        if (videoElement) {
+                            this.videoElement = videoElement;
+                            videoElement.srcObject = this.stream;
+                        }
+                    }}
+                />
+            </div>
         );
     }
 
