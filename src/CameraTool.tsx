@@ -23,7 +23,8 @@ declareModule(() => {
             return {
                 autoSelect: true,
                 section: 2,
-                focusScope: null,
+                focusScopeName: null,
+                togglable: true,
                 char: '📷',
                 boardCursor: 'crosshair',
                 menu: (
