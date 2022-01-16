@@ -17,7 +17,7 @@
         "publish": "colldev publish"
     },
     "dependencies": {
-        "@collboard/modules-sdk": "18.8.0",
+        "@collboard/modules-sdk": "18.10.0",
         "waitasecond": "^1.6.0"
     }
 }
