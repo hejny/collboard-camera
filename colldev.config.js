@@ -1,3 +1,3 @@
 module.exports = {
-    entryPath: './src/moduleSampleBasic.tsx',
+    entryPath: './src/camera-tool.module.tsx',
 };

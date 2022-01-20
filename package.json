@@ -21,6 +21,8 @@
     "dependencies": {},
     "devDependencies": {
         "@collboard/modules-sdk": "18.12.100",
-        "tslint": "^6.1.3"
+        "tslint": "^6.1.3",
+        "waitasecond": "^1.8.10",
+        "xyzt": "^4.7.0"
     }
 }

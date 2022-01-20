@@ -7,6 +7,12 @@
             "focus": true
         },
         {
+            "name": "👨🏽‍💻🌍 Develop exposed",
+            "command": "npm start -- --expose",
+            "onlySingle": true,
+            "focus": true
+        },
+        {
             "name": "🧪 Test",
             "command": "npm run test",
             "onlySingle": true,
@@ -18,6 +24,5 @@
             "onlySingle": true,
             "focus": true
         }
-    
     ]
 }

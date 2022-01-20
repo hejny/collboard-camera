@@ -1,10 +1,19 @@
-import { Abstract2dBoxArt, declareModule, makeArtModule } from '@collboard/modules-sdk';
-import * as React from 'react';
+import { Abstract2dBoxArt, declareModule, makeArtModule, React } from '@collboard/modules-sdk';
 import { forValueDefined } from 'waitasecond';
 import { Vector } from 'xyzt';
-import packageJson from '../package.json';
+import { contributors, description, license, repository, version } from '../package.json';
 
 export class CameraArt extends Abstract2dBoxArt {
+    public static serializeName = 'CameraArt';
+    public static manifest = {
+        name: '@hejny/camera-art',
+        contributors,
+        description,
+        license,
+        repository,
+        version,
+    };
+
     constructor(private stream: MediaProvider) {
         super();
     }
@@ -52,11 +61,4 @@ export class CameraArt extends Abstract2dBoxArt {
         return await (await fetch(canvas.toDataURL(type, quality))).blob();
     }
 }
-
-declareModule(() =>
-    makeArtModule({
-        name: 'Camera',
-        class: CameraArt,
-        ...packageJson,
-    }),
-);
+declareModule(makeArtModule(CameraArt));
