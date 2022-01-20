@@ -1,23 +1,26 @@
 {
-    "version": "10.4.7",
+    "name": "@hejny/collboard-camera",
+    "version": "0.3.14",
     "description": "Simple sample module for Collboard.com created via @collboard/modules-sdk",
     "license": "SEE LICENSE IN LICENSE",
     "contributors": [
-        "Pavol Hejný <pavol@collboard.com> (https://pavolhejny.com)",
-        "Jonáš Rosecký <jonas@collboard.com>"
+        "Pavol Hejný <pavol.hejny@collboard.com> (https://collboard.com/-/about/team)"
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/collboard/module-sample-basic"
+        "url": "https://github.com/collboard/collboard-camera"
     },
     "private": false,
-    "main": "./src/CameraTool.tsx",
     "scripts": {
-        "start": "colldev ",
-        "publish": "colldev publish"
+        "start": "colldev develop",
+        "test": "colldev test",
+        "lint": "tslint -p tsconfig.json",
+        "preversion": "npm run lint && npm test",
+        "postversion": "git push && git push --tags"
     },
-    "dependencies": {
+    "dependencies": {},
+    "devDependencies": {
         "@collboard/modules-sdk": "18.12.0",
-        "waitasecond": "^1.6.0"
+        "tslint": "^6.1.3"
     }
 }

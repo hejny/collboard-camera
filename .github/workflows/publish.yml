@@ -1,0 +1,32 @@
+name: Publish new version
+
+on:
+    push:
+        tags:
+            - 'v*'
+
+jobs:
+    test:
+        name: Test + Lint
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-node@v1
+              with:
+                  node-version: 17
+            - run: npm ci
+            - run: npm run lint
+            - run: npm run test
+
+
+    publish-github:
+        name: Publish on Collboard module store
+        needs: test
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-node@v1
+              with:
+                  node-version: 17
+            - run: npm ci
+            - run: npx colldev publish --token ${{secrets.MODULE_STORE_ROOT_TOKEN}}

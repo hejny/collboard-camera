@@ -4,13 +4,13 @@
         "module": "commonjs",
         "allowJs": true,
         "moduleResolution": "node",
+        "resolveJsonModule": true,
         "jsx": "react",
         "noEmit": false,
         "downlevelIteration": true,
         "esModuleInterop": true,
-        "resolveJsonModule": true,
         "strict": true
     },
-    "include": ["src"],
+    "include": ["src", "assets"],
     "exclude": ["node_modules"]
 }
