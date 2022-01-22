@@ -74,7 +74,7 @@ declareModule(() => {
 
                 observeByHeartbeat({ getValue: () => appState.transform }).subscribe((transform) => {
                     operation.updateWithMutatingCallback(() => {
-                        cameraArt!.shift = Vector.fromObject(videoSize).half().negate().apply(transform.negate());
+                        cameraArt!.shift = Vector.fromObject(videoSize).half().negate().apply(transform.inverse());
                     });
                 });
 
