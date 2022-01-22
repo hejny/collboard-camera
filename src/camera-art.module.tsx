@@ -23,7 +23,6 @@ export class CameraArt extends Abstract2dBoxArt {
     public renderBox() {
         return (
             <div>
-                {Math.random()}
                 <video
                     style={{ opacity: 0.8 }}
                     autoPlay={true}
