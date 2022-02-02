@@ -4,8 +4,7 @@ Camera module for [Collboard.com](https://collboard.com/) created via [@collboar
 
 <!--Badges-->
 
- [![Package Quality](https://packagequality.com/shield/collboard-camera.svg)](https://packagequality.com/#?package=collboard-camera)
- [![License](https://img.shields.io/github/license/hejny/collboard-camera.svg?style=flat)](https://raw.githubusercontent.com/hejny/collboard-camera/master/LICENSE)
+ [![License of 📷 Collboard scanning camera](https://img.shields.io/github/license/hejny/collboard-camera.svg?style=flat)](https://github.com/hejny/collboard-camera/blob/main/LICENSE)
  [![lint](https://github.com/hejny/collboard-camera/actions/workflows/lint.yml/badge.svg)](https://github.com/hejny/collboard-camera/actions/workflows/lint.yml)
  [![test](https://github.com/hejny/collboard-camera/actions/workflows/test.yml/badge.svg)](https://github.com/hejny/collboard-camera/actions/workflows/test.yml)
  [![Known Vulnerabilities](https://snyk.io/test/github/hejny/collboard-camera/badge.svg)](https://snyk.io/test/github/hejny/collboard-camera)
