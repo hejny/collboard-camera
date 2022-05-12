@@ -1,7 +1,7 @@
 {
   "name": "@hejny/collboard-camera",
   "version": "0.3.14",
-  "description": "Camera module for Collboard.com created via @collboard/modules-sdk.",
+  "description": "Camera module for Collboard.com",
   "license": "SEE LICENSE IN LICENSE",
   "contributors": [
     "Pavol Hejný <pavol.hejny@collboard.com> (https://collboard.com/-/about/team)"
