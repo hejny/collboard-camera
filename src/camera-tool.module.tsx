@@ -20,8 +20,8 @@ declareModule(() => {
         },
         toolbar: ToolbarName.Tools,
         async icon(systems) {
-            const { apiClient, materialArtVersioningSystem } = await systems.request(
-                'apiClient',
+            const { usercontentSystem, materialArtVersioningSystem } = await systems.request(
+                'usercontentSystem',
                 'materialArtVersioningSystem',
             );
             return {
@@ -29,17 +29,17 @@ declareModule(() => {
                 section: 2,
                 focusScopeName: null,
                 togglable: true,
-                char: '📷',
+                icon: '📷',
                 boardCursor: 'crosshair',
                 menu: (
                     <>
                         <Icon
-                            char="📸"
+                            icon="📸"
                             onClick={async () => {
                                 //const track = stream.getTracks()[0];
                                 //let imageCapture = new ImageCapture(track);
 
-                                const imageUrl = await apiClient.fileUpload(await cameraArt!.capture('image/jpeg'));
+                                const imageUrl = await usercontentSystem.upload(await cameraArt!.capture('image/jpeg'));
 
                                 const imageArt = new ImageArt(imageUrl, 'camera');
                                 imageArt.shift = cameraArt!.shift;
