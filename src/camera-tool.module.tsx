@@ -2,7 +2,6 @@ import { declareModule, Icon, ImageArt, makeIconModuleOnModule, React, ToolbarNa
 import { Vector } from 'xyzt';
 import { contributors, description, license, repository, version } from '../package.json';
 import { CameraArt } from './camera-art.module';
-import { observeByHeartbeat } from './utils/observeByHeartbeat';
 
 declareModule(() => {
     let cameraArt: CameraArt | null;
@@ -72,7 +71,7 @@ declareModule(() => {
                 const operation = virtualArtVersioningSystem.createPrimaryOperation().newArts(cameraArt);
                 const videoSize = await cameraArt!.videoSize();
 
-                observeByHeartbeat({ getValue: () => appState.transform }).subscribe((transform) => {
+                appState.transform.subscribe((transform) => {
                     operation.updateWithMutatingCallback(() => {
                         cameraArt?.setShift(Vector.fromObject(videoSize).half().negate().apply(transform.inverse()));
                     });
