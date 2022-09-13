@@ -1,6 +1,6 @@
 {
     "name": "@hejny/collboard-camera",
-    "version": "0.3.14",
+    "version": "0.3.15",
     "description": "Camera module for Collboard.com",
     "license": "SEE LICENSE IN LICENSE",
     "contributors": [
