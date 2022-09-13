@@ -5,7 +5,7 @@ import { CameraArt } from './camera-art.module';
 
 declareModule(() => {
     let cameraArt: CameraArt | null;
-    /*!!! remove*/ let stream: MediaStream;
+    /* !!! remove */ let stream: MediaStream;
 
     return makeIconModuleOnModule({
         manifest: {
@@ -35,8 +35,8 @@ declareModule(() => {
                         <Icon
                             icon="📸"
                             onClick={async () => {
-                                //const track = stream.getTracks()[0];
-                                //let imageCapture = new ImageCapture(track);
+                                // const track = stream.getTracks()[0];
+                                // let imageCapture = new ImageCapture(track);
 
                                 const imageUrl = await usercontentSystem.upload(await cameraArt!.capture('image/jpeg'));
 
@@ -62,11 +62,11 @@ declareModule(() => {
 
                 cameraArt = new CameraArt(stream);
 
-                //console.log('cameraArt.size', cameraArt.videoSize);
+                // console.log('cameraArt.size', cameraArt.videoSize);
 
-                //const virtualCameraArt = new HTMLArt(`<video autoplay="true" id="videoElement">`);
+                // const virtualCameraArt = new HTMLArt(`<video autoplay="true" id="videoElement">`);
 
-                //await forTime(100);
+                // await forTime(100);
                 // !!! alert(123);
                 const operation = virtualArtVersioningSystem.createPrimaryOperation().newArts(cameraArt);
                 const videoSize = await cameraArt!.videoSize();
