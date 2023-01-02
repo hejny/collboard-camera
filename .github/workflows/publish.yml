@@ -19,7 +19,7 @@ jobs:
             - run: npm run test
 
 
-    publish-github:
+    publish-collboard:
         name: Publish on Collboard module store
         needs: test
         runs-on: ubuntu-latest
