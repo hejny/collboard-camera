@@ -5,7 +5,7 @@ import { CameraArt } from './camera-art.module';
 
 declareModule(() => {
     let cameraArt: CameraArt | null;
-    /* !!! remove */ let stream: MediaStream;
+    /* TODO: !!! remove */ let stream: MediaStream;
 
     return makeIconModuleOnModule({
         manifest: {
@@ -67,7 +67,7 @@ declareModule(() => {
                 // const virtualCameraArt = new HTMLArt(`<video autoplay="true" id="videoElement">`);
 
                 // await forTime(100);
-                // !!! alert(123);
+                // TODO: !!! alert(123);
                 const operation = virtualArtVersioningSystem.createPrimaryOperation().newArts(cameraArt);
                 const videoSize = await cameraArt!.videoSize();
 
