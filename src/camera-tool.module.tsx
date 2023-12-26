@@ -40,7 +40,7 @@ declareModule(() => {
 
                                 const imageUrl = await usercontentSystem.upload(await cameraArt!.capture('image/jpeg'));
 
-                                const imageArt = new ImageArt(imageUrl, 'camera');
+                                const imageArt = new ImageArt(imageUrl.href, 'camera');
                                 imageArt.shift = cameraArt!.shift;
 
                                 materialArtVersioningSystem.createPrimaryOperation().newArts(imageArt).persist();
